@@ -1,1 +1,0 @@
-print('pam pam pam')
