@@ -1,4 +1,5 @@
 from rest_framework.views import APIView
+from rest_framework import generics
 from api.modelsAru import User, City
 from api.serializersAru import UserSerializer, CitySerializer
 from rest_framework.response import Response
@@ -56,7 +57,14 @@ class UserListAPIView(APIView):
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
-        return Response(serializer.errors)
+#         return Response(serializer.errors)
+# class UserListAPIView(generics.ListCreateAPIView):
+#     def get_queryset(self):# 1
+#         # return User.objects.all() 
+#         return User.objects.get(name=self.request.user.get_username) #3
+#     # queryset = Category.objects.all()# 2
+#     serializer_class = User #указываем какой сериалайзер использовать
+#     permission_classes = (IsAuthenticated,) #чтобы эту стр могли посмотреть лишь авторизованные пользователи
 
 
 class UserDetailAPIView(APIView):

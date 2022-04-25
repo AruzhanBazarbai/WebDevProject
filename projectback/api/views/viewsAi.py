@@ -1,23 +1,26 @@
 from django.shortcuts import Http404
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from api.serializerAi import ProsuctSerializer
+from api.serializersAi import ProductSerializer
 from api.modelsAi import Product
+from rest_framework.permissions import IsAuthenticated
 
 class ProductList(APIView):
+    # permission_classes = (IsAuthenticated,)
     def get(self, request):
         products = Product.objects.all()
-        serializer = ProsuctSerializer(products, many=True)
+        serializer = ProductSerializer(products, many=True)
         return Response(serializer.data)
 
     def post(self, request):
-        serializer = ProsuctSerializer(data=request.data)
+        serializer = ProductSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors)
 
 class ProductDetail(APIView):
+    # permission_classes = (IsAuthenticated,)
     def get_object(self, pk):
         try:
             return Product.objects.get(id=pk)
@@ -26,12 +29,12 @@ class ProductDetail(APIView):
 
     def get(self, request, pk=None):
         product = self.get_object(pk)
-        serializer = ProsuctSerializer(product)
+        serializer = ProductSerializer(product)
         return Response(serializer.data)
 
     def put(self, request, pk=None):
         product = self.get_object(pk)
-        serializer = ProsuctSerializer(instance=product, data=request.data)
+        serializer = ProductSerializer(instance=product, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
