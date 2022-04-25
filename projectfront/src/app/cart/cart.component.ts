@@ -17,5 +17,8 @@ export class CartComponent implements OnInit {
   getProducts(){
     this.products=this.cartService.getProducts();
   }
+  deleteProduct(id: number){
+    this.cartService.deleteProduct(id);
+  }
 
 }
