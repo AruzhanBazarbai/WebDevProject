@@ -7,6 +7,7 @@ class Product(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField(max_length=500)
     cost = models.IntegerField(default=0)
+    img = models.CharField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
 
     class Meta:
@@ -19,5 +20,6 @@ class Product(models.Model):
             'name': self.name,
             'description': self.description,
             'cost': self.cost,
+            'img': self.img,
             # 'category': self.category
         }
