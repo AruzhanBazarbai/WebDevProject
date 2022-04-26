@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Category } from '../category';
 import { CategoryService } from '../category.service';
-import { Product } from '../products';
+import { Product } from '../models';
 
 @Component({
   selector: 'app-home-page',
