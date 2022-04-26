@@ -1,15 +1,22 @@
 <p>home-page works!</p>
 
-<!-- <div *ngFor="let c of categories">
+<div>
+  
+  <div *ngFor="let c of categories">
 
-  <div>
-    <h2>{{c.name}}</h2>
-
-    <div *ngFor="let v of vacancies">
-      {{c.name}}
+    <div>
+      <h2>{{c.name}}</h2>
     </div>
+
+    <div *ngFor="let p of products">
+      <!-- <div *ngIf="p && p.category == c.name">
+
+      
+      {{p.name}}
+      </div> -->
+    </div>
+
 
   </div>
 
-
-</div> -->
+</div>
