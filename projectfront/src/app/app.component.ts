@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'projectfront';
   username='';
   password='';
-  logged:boolean=true;
+  logged:boolean=false;
   constructor(private cartService: CartService){
     const token = localStorage.getItem('token');
     if (token) {
