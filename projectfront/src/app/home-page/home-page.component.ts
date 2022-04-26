@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Category } from '../category';
 import { CategoryService } from '../category.service';
+import { ProductService } from '../product.service';
 import { Product } from '../products';
 
 @Component({
@@ -20,6 +21,7 @@ export class HomePageComponent implements OnInit {
   constructor(
     private catServies: CategoryService,
     private route: ActivatedRoute,
+    private prServies: ProductService,
     ) { }
 
   ngOnInit(): void {
@@ -31,5 +33,11 @@ export class HomePageComponent implements OnInit {
     this.categories=data;
     })
   }
+
+  // getProducts(){
+  //   this.prServies.getProducts().subscribe((data) =>{
+  //     this.products = data;
+  //   })
+  // }
 
 }
