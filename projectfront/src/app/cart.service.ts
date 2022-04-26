@@ -8,8 +8,7 @@ import { Product, AuthToken } from './models';
 })
 export class CartService {
   products : Product[]=[];
-  BASE_URL="http://127.0.0.1:8000/"
-
+  BASE_URL = 'http://127.0.0.1:8000/';
   constructor(private http: HttpClient) { }
 
   addToCart(product: Product){

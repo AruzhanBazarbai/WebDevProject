@@ -4,6 +4,7 @@ import { Category } from '../category';
 import { CategoryService } from '../category.service';
 import { ProductService } from '../product.service';
 import { Product } from '../models';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-home-page',
@@ -22,17 +23,22 @@ export class HomePageComponent implements OnInit {
     private catServies: CategoryService,
     private route: ActivatedRoute,
     private prServies: ProductService,
+    private cartService: CartService
     ) { }
 
   ngOnInit(): void {
-
+    this.getCategories();
   }
 
   getCategories(){
     this.catServies.getCategories().subscribe((data)=>{
-    this.categories=data;
+      this.categories=data;
     })
   }
+  addToCart(product: Product){
+    this.cartService.addToCart(product);
+  }
+
 
   // getProducts(){
   //   this.prServies.getProducts().subscribe((data) =>{

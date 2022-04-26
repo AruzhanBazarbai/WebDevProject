@@ -1,4 +1,4 @@
-<app-top-bar></app-top-bar>
+<!-- <app-top-bar></app-top-bar> -->
 <div class="main">
   <p>home-page works!</p>
 
@@ -10,12 +10,11 @@
 
     <div *ngFor="let p of products">
       <!-- <div *ngIf="p && p.category == c.name">
-
       
       {{p.name}}
       </div> -->
 
-      <button>add to cart</button>
+      <button (click)="addToCart(p)">add to cart</button>
       
     </div>
 
