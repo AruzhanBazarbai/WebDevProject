@@ -7,7 +7,7 @@ class Product(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField(max_length=500)
     cost = models.IntegerField(default=0)
-    img = models.CharField()
+    img = models.TextField(null=True, default="")
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
 
     class Meta:

@@ -58,6 +58,7 @@ def category_products(request,pk):
         return Response({'massage': str(e)}, status=400)
 
     if request.method == 'GET':
-        products=Product.objects.filter(category=ctg)
+        products=Product.objects.filter(category_id=ctg)
+        # products=Product.objects.filter(category_id=ctg.to_json().get('id'))
         serializer = ProductSerializer(products,many=True)
         return Response(serializer.data)
