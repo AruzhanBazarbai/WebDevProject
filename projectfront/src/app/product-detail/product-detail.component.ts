@@ -10,14 +10,12 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
-  products : Product[] = [];
+  product !: Product;
 
   constructor(private categoryService: CategoryService,
               private route: ActivatedRoute,
               public router: Router
-              ) {
-    categoryService.apiData$.subscribe(data => this.products = data)
-  }
+              ) { }
 
   ngOnInit(): void {
     this.getProduct();
@@ -25,9 +23,9 @@ export class ProductDetailComponent implements OnInit {
 
   getProduct(){
     this.route.paramMap.subscribe((params) => {
-      const id = parseInt(params.get('id') || '{}');
-      this.categoryService.getProducts(id).subscribe((data) => {
-        this.products = data;
+      const id = parseInt(params.get('p_id') || '{}');
+      this.categoryService.getProduct(id).subscribe((data) => {
+        this.product = data;
       })
     })
   }
