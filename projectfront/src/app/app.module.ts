@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { RouterModule, Routes } from '@angular/router';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CommonModule} from "@angular/common";
 import { HomePageComponent } from './home-page/home-page.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { CartComponent } from './cart/cart.component';
@@ -11,6 +14,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthInterceptor } from './AuthInterceptor';
+import { CategoryListComponent } from './category-list/category-list.component';
+import { CategoryProductComponent } from './category-product/category-product.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +24,10 @@ import { AuthInterceptor } from './AuthInterceptor';
     HomePageComponent,
     TopBarComponent,
     CartComponent,
-    OrderComponent  
+    OrderComponent,
+    CategoryListComponent,
+    CategoryProductComponent,
+    ProductDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +35,8 @@ import { AuthInterceptor } from './AuthInterceptor';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    CommonModule,
+    RouterModule,
   ],
   providers: [
     {
