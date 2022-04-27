@@ -23,8 +23,8 @@ export class CategoryService {
     return this.http.get<Category[]>(`${this.BASE_URL}/api/categories/`);
   }
 
-  getProduct(id:any): Observable<Product[]>{
-    return this.http.get<Product[]>(`${this.BASE_URL}/api/products/${id}/`);
+  getProduct(id:any): Observable<Product>{
+    return this.http.get<Product>(`${this.BASE_URL}/api/products/${id}/`);
   }
 
   getProducts(id:any):Observable<Product[]>{
