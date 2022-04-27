@@ -1,7 +1,7 @@
 .main{
   background-color: #f8f1f4;
-  display: table;
   width: 100%;
+  margin-left: 20px;
 }
 
 a, a:visited{
@@ -11,7 +11,8 @@ a, a:visited{
 }
 
 .cats{
-  display: table-cell;
+  display: inline-block;
+  margin-bottom: 50px;
 }
 
 .cat{
@@ -20,8 +21,16 @@ a, a:visited{
   height: 250px;
   width: 250px;
   padding: 20px;
+  /* margin: 20px; */
+}
+
+#name{
+  height: 20px;
+  width: 250px;
+  margin: 0;
+  padding-bottom: 25px;
 }
 
 #add{
-  width: 200px;
+  width: 250px;
 }
