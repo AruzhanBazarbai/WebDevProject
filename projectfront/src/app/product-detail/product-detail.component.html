@@ -1,3 +1,23 @@
-<p>Product</p>
+<main class="container">
 
-<h1>{{product.name}}</h1>
+  <div class="left-column">
+    <img src="{{product.img}}" alt="The Soap Store">
+  </div>
+
+  <div class="right-column">
+
+    <!-- Product Description -->
+    <div class="product-description">
+      <h1>{{product.name}}</h1>
+      <p>{{product.description}}</p>
+    </div>
+
+    <!-- Product Pricing -->
+    <div class="product-price">
+      <span>Price: {{product.cost}}$</span>
+      <button class="cart-btn" (click)="addToCart(product)">add to cart</button>
+    </div>
+
+  </div>
+
+</main>

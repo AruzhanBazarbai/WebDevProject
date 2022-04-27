@@ -1,0 +1,51 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+}
+
+.left-site {
+  width: 35%;
+  margin-top: 60px;
+  margin-left: 55px;
+}
+
+.right-site {
+  width: 35%;
+  margin-top: 60px;
+  margin-left: 55px;
+}
+
+.list{
+  border-bottom: 1px solid #abbd8c;
+  margin-bottom: 10px;
+}
+
+.left-site h1 {
+  font-weight: 1000;
+  font-size: 600%;
+  color: #275362;
+  letter-spacing: -2px;
+}
+.list a{
+  font-size: 26px;
+  font-weight: 300;
+  color: #43474D;
+  margin-right: 20px;
+  text-decoration: none;
+}
+.list p {
+  font-size: 20px;
+  font-weight: 50;
+  color: #407a61;
+  line-height: 24px;
+}
+

@@ -3,6 +3,7 @@ import { CategoryService } from "../category.service";
 import { Category } from "../category";
 import { Product } from "../models";
 import {ActivatedRoute, Router} from "@angular/router";
+import {CartService} from "../cart.service";
 
 @Component({
   selector: 'app-product-detail',
@@ -14,7 +15,8 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(private categoryService: CategoryService,
               private route: ActivatedRoute,
-              public router: Router
+              public router: Router,
+              private cartService: CartService,
               ) { }
 
   ngOnInit(): void {
@@ -28,6 +30,10 @@ export class ProductDetailComponent implements OnInit {
         this.product = data;
       })
     })
+  }
+
+  addToCart(product: Product){
+    this.cartService.addToCart(product);
   }
 
 }

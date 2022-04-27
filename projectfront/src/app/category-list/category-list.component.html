@@ -1,7 +1,15 @@
-<h1>Categories</h1>
-<ul>
-    <li *ngFor="let c in categories">
-       <a (click)="getProducts(c.id)" routerLink="/category-products">{{c.name}}</a>
-        <a [routerLink]="['categories', c.id, 'products']">{{c.name}}</a>
-    </li>
-</ul>
+<main class="main">
+
+  <div class="right">
+    <h1>Categories</h1>
+  </div>
+
+  <div class="left">
+    <ul class="categories-list">
+      <li class="category-in-list" *ngFor="let c of categories">
+        <a [routerLink]="[c.id, 'products']">{{c.name}}</a>
+      </li>
+    </ul>
+  </div>
+
+</main>

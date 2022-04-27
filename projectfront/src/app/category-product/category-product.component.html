@@ -1,6 +1,16 @@
-<h1>Category - Products</h1>
-<ul>
-    <li *ngFor="let p of products">
-        <a [routerLink]="[p.id]">{{p.name}}</a>
-    </li>
-</ul>
+<main class="main-container">
+
+  <div class="left-site">
+    <h1>{{category.name}}</h1>
+  </div>
+
+  <div class="right-site">
+      <ul class="products-list">
+        <li class="list" *ngFor="let p of products">
+          <a [routerLink]="[p.id]">{{p.name}}</a>
+          <p>{{p.description}}</p>
+        </li>
+      </ul>
+  </div>
+
+</main>
