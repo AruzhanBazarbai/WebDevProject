@@ -1,7 +1,7 @@
 <h1>Categories</h1>
 <ul>
     <li *ngFor="let c in categories">
-<!--        <a (click)="getProducts(c.id)" routerLink="/category-products">{{c.name}}</a>-->
+       <a (click)="getProducts(c.id)" routerLink="/category-products">{{c.name}}</a>
         <a [routerLink]="['categories', c.id, 'products']">{{c.name}}</a>
     </li>
 </ul>

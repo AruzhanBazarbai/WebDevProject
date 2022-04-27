@@ -23,10 +23,10 @@ export class CategoryListComponent implements OnInit {
     });
   }
 
-  // getProducts(id:any){
-  //   this.categoryService.getProducts(id).subscribe((data)=>{
-  //     this.categoryService.setData(data);
-  //   });
-  // }
+  getProducts(id:any){
+    this.categoryService.getProducts(id).subscribe((data)=>{
+      this.categoryService.setData(data);
+    });
+  }
 
 }
