@@ -7,14 +7,14 @@
       <h2><a [routerLink]="['categories', c.id, 'products']">{{c.name}}</a></h2>
     </div>
 
-    <div *ngFor="let p of products">
+    <div class="cats" *ngFor="let p of products">
 
-      <!-- <div *ngIf="p && p.category==c.id"> -->
-<!--       
+      <div class="cat" *ngIf="p &&  p.category_id==c.id"> 
+       
         {{p.name}}
-        <img src={{p.image}}>
-        <button (click)="addToCart(p)">add to cart</button> -->
-      <!-- </div> -->
+        <img src={{p.img}} width="100px">
+        <button (click)="addToCart(p)">add to cart</button>
+      </div>
       
     </div>
 
