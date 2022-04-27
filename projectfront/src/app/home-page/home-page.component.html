@@ -12,8 +12,8 @@
       <div class="cat" *ngIf="p &&  p.category_id==c.id"> 
        
         {{p.name}}
-        <img src={{p.img}} width="100px">
-        <button (click)="addToCart(p)">add to cart</button>
+        <img src={{p.img}} width="200px">
+        <button id="add" (click)="addToCart(p)">add to cart</button>
       </div>
       
     </div>

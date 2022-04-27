@@ -8,7 +8,8 @@
 
     <div *ngIf="logged">
         <app-top-bar></app-top-bar>
-        <router-outlet></router-outlet>
         <button (click)="logout()">Logout</button>
+        <router-outlet></router-outlet>
+        
     </div>
 </div>

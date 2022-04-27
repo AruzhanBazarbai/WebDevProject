@@ -1,5 +1,7 @@
 .main{
   background-color: #f8f1f4;
+  display: table;
+  width: 100%;
 }
 
 a, a:visited{
@@ -9,13 +11,17 @@ a, a:visited{
 }
 
 .cats{
-  display: inline;
+  display: table-cell;
 }
 
 .cat{
   display: flex;
   flex-direction: column;
-  height: 150px;
-  width: 150px;
+  height: 250px;
+  width: 250px;
   padding: 20px;
+}
+
+#add{
+  width: 200px;
 }
