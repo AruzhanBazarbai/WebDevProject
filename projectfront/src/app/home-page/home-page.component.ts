@@ -28,6 +28,7 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCategories();
+    this.getProducts();
   }
 
   getCategories(){
@@ -39,11 +40,10 @@ export class HomePageComponent implements OnInit {
     this.cartService.addToCart(product);
   }
 
-
-  // getProducts(){
-  //   this.prServies.getProducts().subscribe((data) =>{
-  //     this.products = data;
-  //   })
-  // }
+  getProducts(){
+    this.catServies.getProds().subscribe((data)=>{
+      this.products=data;
+    })
+  }
 
 }

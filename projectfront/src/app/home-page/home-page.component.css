@@ -1,0 +1,10 @@
+.main{
+  background-color: #f8f1f4;
+}
+
+a, a:visited{
+  text-decoration: none;
+  text-transform: none;
+  color: #275362;
+  /* background-color: #ece2dd; */
+}

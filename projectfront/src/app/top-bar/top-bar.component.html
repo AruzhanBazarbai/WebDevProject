@@ -1,16 +1,12 @@
 <div class="top">
-  <h1>VELARIME</h1>
+  <h1 routerLink="/" style="cursor: pointer">VELARIME</h1>
 
-  <div class="menu">
+  <div class="menu" *ngFor="let c of categories">
     <ul>
       <li>
-        cat1
-      </li>
-      <li>
-        cat2
-      </li>
-      <li>
-        cat3
+        <a [routerLink]="['categories', c.id, 'products']">
+          {{c.name}}
+        </a>
       </li>
     </ul>
   </div>
@@ -18,7 +14,7 @@
   <div class="top_b">
     <a routerLink="/cart"><button>Cart</button></a>
 
-    <button>Sign</button>
+    <!-- <button>Sign</button> -->
   </div>
 
 </div>

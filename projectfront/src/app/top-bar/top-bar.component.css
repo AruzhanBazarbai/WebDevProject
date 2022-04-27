@@ -1,5 +1,5 @@
 .top{
-  background-color: #407a61;
+  background-color: #275362;
   top: 0;
   left: 0;
   width: 100%;
@@ -14,4 +14,13 @@
 .menu ul li{
   list-style: none;
   display: inline;
+}
+
+.top_b{
+  margin-left: 50px;
+}
+
+a, a:visited{
+  text-decoration: none;
+  color: #f8f1f4;
 }

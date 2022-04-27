@@ -3,7 +3,7 @@ import { CategoryService } from "../category.service";
 import { Category } from "../category";
 import { Product } from "../models";
 import {ActivatedRoute, Router} from "@angular/router";
-
+ 
 @Component({
   selector: 'app-category-product',
   templateUrl: './category-product.component.html',

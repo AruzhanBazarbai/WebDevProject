@@ -1,20 +1,20 @@
 <!-- <app-top-bar></app-top-bar> -->
 <div class="main">
-  <p>home-page works!</p>
 
   <div *ngFor="let c of categories">
-
+ 
     <div>
-      <h2>{{c.name}}</h2>
+      <h2><a [routerLink]="['categories', c.id, 'products']">{{c.name}}</a></h2>
     </div>
 
     <div *ngFor="let p of products">
-      <!-- <div *ngIf="p && p.category == c.name">
-      
-      {{p.name}}
-      </div> -->
 
-      <button (click)="addToCart(p)">add to cart</button>
+      <!-- <div *ngIf="p && p.category==c.id"> -->
+<!--       
+        {{p.name}}
+        <img src={{p.image}}>
+        <button (click)="addToCart(p)">add to cart</button> -->
+      <!-- </div> -->
       
     </div>
 
