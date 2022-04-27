@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { CartService } from '../cart.service';
@@ -9,25 +10,27 @@ import { CartService } from '../cart.service';
 })
 export class OrderComponent implements OnInit {
   products=this.cartService.getProducts();
-  
-  checkOutForm=this.formBuilder.group({ 
-    name:'',
-    surename:'',
-    address: '',
-    card_number:''
-  });
+  name='';
+  surename='';
+  address='';
+  card_number='';
 
   logged: boolean=false;
-  constructor(private formBuilder: FormBuilder,
-              private cartService: CartService) { }
+  constructor(private cartService: CartService,
+              private location: Location) { }
 
   ngOnInit(): void {
 
   }
   onSubmit():void{
+    this.name='';
+    this.surename='';
+    this.address='';
+    this.card_number='';
     this.products=this.cartService.clearItems();
-    console.warn('Your order has been submitted',this.checkOutForm.value);
-    this.checkOutForm.reset();
+    window.alert('Your order has been submitted');
+    // this.location.back();
+
   }
 
 

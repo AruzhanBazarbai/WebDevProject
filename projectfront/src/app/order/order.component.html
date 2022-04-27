@@ -1,28 +1,12 @@
-<form [formGroup]="checkOutForm" (ngSubmit)="onSubmit()">
-    <div>
-        <label for="name">
-            Name
-        </label>
-        <input id="name" type="text" formControlName="name">
-    </div>
-    <div>
-        <label for="surename">
-            Surename
-        </label>
-        <input id="surename" type="text" formControlName="surename">
-    </div>
-    <div>
-        <label for="address">
-            Address
-        </label>
-        <input id="address" type="text" formControlName="address">
-    </div>
-    <div>
-        <label for="card_number">
-            Card number
-        </label>
-        <input id="card_number" type="text" formControlName="card_number">
-    </div>
-    <button class="button" type="submit">Purchase</button> 
-
-</form>
+<div class="order-form">
+    <h1>Order form</h1>
+    <fieldset>
+        <p>Name: <input type="text" [(ngModel)]="name"></p>
+        <p>Surename: <input type="text" [(ngModel)]="surename"></p>
+        <p>Adress: <input type="text" [(ngModel)]="address"></p>
+        <p>Card number: <input type="text" [(ngModel)]="card_number"></p>
+    </fieldset>
+    
+    
+    <a routerLink="/"><button (click)="onSubmit()">Submit</button></a>
+</div>
