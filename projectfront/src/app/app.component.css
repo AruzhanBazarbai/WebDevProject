@@ -1,3 +1,18 @@
 .all{
   background-color: #f8f1f4;
 }
+
+.log{
+  border: none;
+  width: 100%;
+  background-color: #407a61;
+  color: #f8f1f4;
+  margin-top: -5px;
+  padding: 5px;
+  top: 0;
+}
+
+.log:hover{
+  cursor: pointer;
+  background-color: #3d6c58;
+}
