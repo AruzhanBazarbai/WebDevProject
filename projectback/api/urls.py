@@ -7,8 +7,8 @@ urlpatterns = [
     path('cities/<int:pk>/', CityDetailAPIView.as_view()),
     path('users/', UserListAPIView.as_view()),
     path('users/<int:pk>/', UserDetailAPIView.as_view()),
-    path('products/',ProductList.as_view()),
-    path('products/<int:pk>/',ProductDetail.as_view()),
+    path('products/', ProductList.as_view()),
+    path('products/<int:pk>/', ProductDetail.as_view()),
     path('categories/', category_list),
     path('categories/<int:pk>/', category_detail),
     path('categories/<int:pk>/products/',category_products )

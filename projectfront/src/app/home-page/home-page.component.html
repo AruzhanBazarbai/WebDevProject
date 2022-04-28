@@ -1,10 +1,10 @@
 <!-- <app-top-bar></app-top-bar> -->
 <div class="main">
 
-  <div *ngFor="let c of categories">
+  <div class="lilmain" *ngFor="let c of categories">
  
     <div>
-      <h2><a [routerLink]="['categories', c.id, 'products']">{{c.name}}</a></h2>
+      <h2><a [routerLink]="['categories', c.id, 'products']" style="font-size: larger;">{{c.name}}</a></h2>
     </div>
 
     <div class="cats" *ngFor="let p of products">
