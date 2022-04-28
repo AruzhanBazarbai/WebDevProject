@@ -11,8 +11,9 @@
 
       <div class="cat" *ngIf="p &&  p.category_id==c.id"> 
        
-        <p id="name">{{p.name}}</p>
-        <img src={{p.img}} width="250px">
+          <p id="name" style="font-size: larger;" [routerLink]="['categories', c.id, 'products', p.id]">{{p.name}}</p>
+          <img src={{p.img}} width="250px" [routerLink]="['categories', c.id, 'products', p.id]">
+
         <button id="add" (click)="addToCart(p)">add to cart</button>
       </div>
       
