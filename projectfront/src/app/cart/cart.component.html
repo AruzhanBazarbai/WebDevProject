@@ -1,18 +1,11 @@
 <h1>Cart</h1>
 
-<div *ngFor="let p of products">
+<div *ngFor="let p of products;let i= index">
     <ul>
         <li><h2>{{p.name}}</h2></li>
         <p><strong>Description: </strong>{{p.description}}</p>
         <p><strong>Cost: </strong>{{p.cost}}</p>
-        <button (click)="deleteProduct(p.id)">X</button>
+        <button (click)="deleteProduct(i)">X</button>
         <a routerLink="/order"><button>Go to order</button></a>
     </ul>
 </div>
-<ul>
-    <li><h2>Product 1</h2></li>
-        <p><strong>Description: </strong>description</p>
-        <p><strong>Cost: </strong>1000</p>
-        <button>X</button>
-        <a routerLink="/order"><button>Go to order</button></a>
-</ul>
