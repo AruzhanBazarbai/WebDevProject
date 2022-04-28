@@ -7,9 +7,10 @@
             <img src="{{p.img}}">
             <p><strong>Description: </strong>{{p.description}}</p>
             <p><strong>Cost: </strong>{{p.cost}}$</p>
-            <button class="deleteButton" (click)="deleteProduct(i)">X</button>
-            <a routerLink="/order" class="orderButton"><button>Go to order</button></a>
+            <button class="deleteButton" (click)="deleteProduct(i)">Delete</button>
         </ul>
+        
     </div>
+    <a routerLink="/order" ><button class="orderButton">Go to order</button></a>
 
 </div>
