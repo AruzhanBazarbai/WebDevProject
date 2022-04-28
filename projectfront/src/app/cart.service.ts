@@ -13,6 +13,7 @@ export class CartService {
 
   addToCart(product: Product){
     this.products.push(product);
+    window.alert("The product added to cart");
   }
   getProducts(){
     return this.products;
