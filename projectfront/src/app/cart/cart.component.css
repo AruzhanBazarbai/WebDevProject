@@ -1,0 +1,35 @@
+img{
+    width:100px;
+}
+h1{
+    font-family: 'Roboto', sans-serif;
+    color: #275362;
+    font-weight: 100;
+    font-size: 300%;
+}
+button{
+    display: inline-block;
+    background-color: #abbd8c;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    color: #f8f1f4;
+    text-decoration: none;
+    padding: 10px;
+    /* transition: all .5s; */
+}
+button:hover{
+    background-color: #407a61;
+}
+.deleteButton{
+    width:20px;
+    padding-right: 20px;
+    margin-right: 2px;
+}
+.orderButton{
+    width:10px;
+}
+.gBlock{
+    color: #275362;
+}
+  
