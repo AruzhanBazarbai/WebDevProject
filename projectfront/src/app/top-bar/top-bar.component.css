@@ -25,6 +25,15 @@
   margin-left: 50px;
 }
 
+.top_b select{
+  border: none;
+  margin-right: 30px;
+  background-color: #f8f1f4;
+  border-radius: 2px;
+  color: #275362;
+  padding: 3px 20px;
+}
+
 .top_b button{
   border: none;
   margin-right: 30px;

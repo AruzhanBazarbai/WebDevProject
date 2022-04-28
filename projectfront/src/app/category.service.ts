@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Category } from './category';
-import { Product } from './models';
+import { City, Product } from './models';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -37,5 +37,9 @@ export class CategoryService {
 
   getCategory(id:any): Observable<Category> {
     return this.http.get<Category>(`${this.BASE_URL}/api/categories/${id}/`);
+  }
+
+  getCities(): Observable<City[]>{
+    return this.http.get<City[]>(`${this.BASE_URL}/api/cities/`);
   }
 }

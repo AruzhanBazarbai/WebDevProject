@@ -12,6 +12,9 @@
   </div>
 
   <div class="top_b">
+    <select>
+      <option *ngFor="let city of cities">{{city.name}}</option>
+    </select>
     <a routerLink="categories"><button>Go to categories</button></a>
     <a routerLink="/cart"><button>Cart</button></a>
 

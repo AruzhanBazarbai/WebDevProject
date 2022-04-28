@@ -9,3 +9,8 @@ export interface Product{
     img: string;
     category_id: number;
 }
+
+export interface City{
+    id: number;
+    name: string;
+}
