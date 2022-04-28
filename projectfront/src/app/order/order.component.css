@@ -2,5 +2,27 @@ fieldset{
     width:200px;
 }
 .order-form{
-    margin-left:0px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.order-form button{
+    width: 100px; 
+    margin-top: 10px;
+    background-color: #abbd8c;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    color: #f8f1f4;
+    text-decoration: none;
+    padding: 10px;
+}
+.order-form h1{
+    /* font-family: '', sans-serif; */
+    color: #275362;
+    font-weight: 600;
+    font-size: 400%;
+    letter-spacing: -2px;
 }

@@ -1,5 +1,6 @@
 .all{
   background-color: #f8f1f4;
+  height: 1000px;
 }
 
 .log{
@@ -15,4 +16,33 @@
 .log:hover{
   cursor: pointer;
   background-color: #3d6c58;
+}
+.login-block{
+  width:220px;
+  display: flex;
+  height: 1000px;
+  align-items: center;
+  align-content: center;
+  margin: 0px 0px 0px 600px;
+  flex-direction: column;
+}
+.login-block button{
+  width: 80px; 
+  margin-top: 10px;
+  background-color: #87956f;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  color: #f8f1f4;
+  text-decoration: none;
+  padding: 10px;
+}
+.login-block h1{
+  color: #275362;
+    font-weight: 500;
+    font-size: 300%;
+    letter-spacing: -2px;
+}
+.login-block h1{
+  margin-top:200px;
 }

@@ -1,12 +1,15 @@
-<h1>Cart</h1>
+<div class="cart">
+    <h1>Cart</h1>
 
-<div class="gBlock" *ngFor="let p of products;let i= index">
-    <ul>
-        <li><h2>{{p.name}}</h2></li>
-        <img src="{{p.img}}">
-        <p><strong>Description: </strong>{{p.description}}</p>
-        <p><strong>Cost: </strong>{{p.cost}}$</p>
-        <button class="deleteButton" (click)="deleteProduct(i)">X</button>
-        <a routerLink="/order" class="orderButton"><button>Go to order</button></a>
-    </ul>
+    <div class="gBlock" *ngFor="let p of products;let i= index">
+        <ul>
+            <li><h2>{{p.name}}</h2></li>
+            <img src="{{p.img}}">
+            <p><strong>Description: </strong>{{p.description}}</p>
+            <p><strong>Cost: </strong>{{p.cost}}$</p>
+            <button class="deleteButton" (click)="deleteProduct(i)">X</button>
+            <a routerLink="/order" class="orderButton"><button>Go to order</button></a>
+        </ul>
+    </div>
+
 </div>

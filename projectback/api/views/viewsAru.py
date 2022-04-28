@@ -7,7 +7,7 @@ from django.shortcuts import Http404
 from rest_framework.permissions import IsAuthenticated
 
 class CityListAPIView(APIView):
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
     def get(self, request):
         cities = City.objects.all()
         serializer=CitySerializer(cities,many=True)
@@ -20,7 +20,7 @@ class CityListAPIView(APIView):
         return Response(serializer.errors)
 class CityDetailAPIView(APIView):
 
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
     def get_object(self,pk):
         try:
             city=City.objects.get(id=pk)

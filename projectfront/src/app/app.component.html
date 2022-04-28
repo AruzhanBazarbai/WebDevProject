@@ -1,8 +1,12 @@
 <div class="all">
-    <div *ngIf="!logged">
+    <div *ngIf="!logged" class="login-block">
         <h1>Login form</h1>
-        <p>Username: <input type="text" [(ngModel)]="username"></p>
-        <p>Password: <input type="text" [(ngModel)]="password"></p>
+        <fieldset>
+            
+            <p>Username: <input type="text" [(ngModel)]="username"></p>
+            <p>Password: <input type="text" [(ngModel)]="password"></p>
+            
+        </fieldset>
         <a routerLink="/"><button (click)="login()">Login</button></a>
     </div>
 

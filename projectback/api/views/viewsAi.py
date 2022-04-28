@@ -6,7 +6,7 @@ from api.modelsAi import Product
 from rest_framework.permissions import IsAuthenticated
 
 class ProductList(APIView):
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
     def get(self, request):
         products = Product.objects.all()
         serializer = ProductSerializer(products, many=True)
@@ -20,7 +20,7 @@ class ProductList(APIView):
         return Response(serializer.errors)
 
 class ProductDetail(APIView):
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
     def get_object(self, pk):
         try:
             return Product.objects.get(id=pk)

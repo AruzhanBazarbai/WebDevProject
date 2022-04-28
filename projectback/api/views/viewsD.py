@@ -15,7 +15,7 @@ from rest_framework.permissions import IsAuthenticated
 
 @api_view(['GET','POST'])
 def category_list(request):
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
     if request.method == 'GET':
         categories = Category.objects.filter().order_by('name')
         serializer = CategorySerializer(categories, many=True)
@@ -30,7 +30,7 @@ def category_list(request):
 
 @api_view(['GET', 'PUT', 'DELETE'])
 def category_detail(request, pk):
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
     try:
         category = Category.objects.get(id=pk)
     except Category.DoesNotExist as e:
