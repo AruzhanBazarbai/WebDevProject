@@ -51,7 +51,7 @@ def category_detail(request, pk):
 
 
 @api_view(['GET'])
-def category_products(request,pk):
+def category_products(request, pk):
     try:
         ctg = Category.objects.get(id=pk)
     except Category.DoesNotExist as e:
@@ -60,5 +60,5 @@ def category_products(request,pk):
     if request.method == 'GET':
         products=Product.objects.filter(category_id=ctg)
         # products=Product.objects.filter(category_id=ctg.to_json().get('id'))
-        serializer = ProductSerializer(products,many=True)
+        serializer = ProductSerializer(products, many=True)
         return Response(serializer.data)
