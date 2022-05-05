@@ -19,6 +19,12 @@ export class HomePageComponent implements OnInit {
 
   products: Product[]=[];
 
+  // filterState:boolean=false;
+
+  // filteredData: Product[]=[];
+
+  // data:string="";
+
   constructor(
     private catServies: CategoryService,
     private route: ActivatedRoute,
@@ -45,5 +51,16 @@ export class HomePageComponent implements OnInit {
       this.products=data;
     })
   }
+  // filter(){
+  //   // this.getItems();
+  //   // this.albums=this.mainData;
+  //   this.filterState=true;
+  //   this.filteredData=this.products.filter(x=>{
+  //       return x.name.search(this.data)!==-1 ;
+  //   });
+  //   this.data='';
+  //   // this.albums=this.filteredData;
+  // }
+  
 
 }

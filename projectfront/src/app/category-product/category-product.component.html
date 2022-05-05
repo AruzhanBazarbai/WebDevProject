@@ -1,4 +1,9 @@
-<main class="main-container">
+ <fieldset style="width:600px;">
+  <label for=""><strong>Enter:</strong></label>
+  <input type="text" [(ngModel)]="data"  style="width:480px;">
+  <button type="submit" (click)="filter()">Find</button>
+</fieldset>
+<main class="main-container" *ngIf="!filterState">
 
   <div class="left-site">
     <h1>{{category.name}}</h1>
@@ -7,6 +12,22 @@
   <div class="right-site">
       <ul class="products-list">
         <li class="list" *ngFor="let p of products">
+          <a [routerLink]="[p.id]">{{p.name}}</a>
+          <p>{{p.description}}</p>
+        </li>
+      </ul>
+  </div>
+
+</main>
+<main class="main-container" *ngIf="filterState">
+
+  <div class="left-site">
+    <h1>{{category.name}}</h1>
+  </div>
+
+  <div class="right-site">
+      <ul class="products-list">
+        <li class="list" *ngFor="let p of filteredData">
           <a [routerLink]="[p.id]">{{p.name}}</a>
           <p>{{p.description}}</p>
         </li>
