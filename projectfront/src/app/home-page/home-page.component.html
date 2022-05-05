@@ -23,3 +23,45 @@
   </div>
 
 </div>
+
+<!-- <fieldset style="width:600px;">
+  <label for=""><strong>Enter:</strong></label>
+  <input type="text" [(ngModel)]="data"  style="width:480px;">
+  <button type="submit" (click)="filter()">Find</button>
+</fieldset>
+<div class="main" *ngIf="!filterState">
+
+  <div class="lilmain" *ngFor="let c of categories">
+ 
+    <div>
+      <h2><a [routerLink]="['categories', c.id, 'products']" style="font-size: larger;">{{c.name}}</a></h2>
+    </div>
+
+    <div class="cats" *ngFor="let p of products">
+
+      <div class="cat" *ngIf="p &&  p.category_id==c.id"> 
+       
+          <p id="name" style="font-size: larger;" [routerLink]="['categories', c.id, 'products', p.id]">{{p.name}}</p>
+          <img src={{p.img}} width="250px" [routerLink]="['categories', c.id, 'products', p.id]">
+
+        <button id="add" (click)="addToCart(p)">add to cart</button>
+      </div>
+      
+    </div>
+
+
+  </div>
+
+</div>
+<div class="main"  *ngIf="filterState">
+
+  <div class="lilmain" *ngFor="let p of filteredData">
+    <p id="name" style="font-size: larger;" [routerLink]="['categories', p.category_id, 'products', p.id]">{{p.name}}</p>
+          <img src={{p.img}} width="250px" [routerLink]="['categories', p.category_id, 'products', p.id]">
+
+        <button id="add" (click)="addToCart(p)">add to cart</button>
+
+
+  </div>
+
+</div> -->

@@ -1,4 +1,9 @@
-<main class="main-container">
+ <fieldset class="search" style="width:600px; border: none;">
+  <label for=""><strong style="font-size: 30px; color: #275362; padding-right: 15px;">SEARCH</strong></label>
+  <input class="inp" type="text" [(ngModel)]="data"  style="width:1150px; border: none; height: 30px; border-radius: 3px;">
+  <button type="submit" (click)="filter()">Find</button>
+</fieldset>
+<main class="main-container" *ngIf="!filterState">
 
   <div class="left-site">
     <h1>{{category.name}}</h1>
@@ -7,6 +12,22 @@
   <div class="right-site">
       <ul class="products-list">
         <li class="list" *ngFor="let p of products">
+          <a [routerLink]="[p.id]">{{p.name}}</a>
+          <p>{{p.description}}</p>
+        </li>
+      </ul>
+  </div>
+
+</main>
+<main class="main-container" *ngIf="filterState">
+
+  <div class="left-site">
+    <h1>{{category.name}}</h1>
+  </div>
+
+  <div class="right-site">
+      <ul class="products-list">
+        <li class="list" *ngFor="let p of filteredData">
           <a [routerLink]="[p.id]">{{p.name}}</a>
           <p>{{p.description}}</p>
         </li>

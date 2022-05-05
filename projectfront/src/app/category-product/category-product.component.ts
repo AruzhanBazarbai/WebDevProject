@@ -14,6 +14,11 @@ export class CategoryProductComponent implements OnInit {
 
   products : Product[] = []
   category !: Category;
+  filterState:boolean=false;
+
+  filteredData: Product[]=[];
+
+  data:string="";
 
   constructor(private categoryService: CategoryService,
               private route: ActivatedRoute,
@@ -39,6 +44,16 @@ export class CategoryProductComponent implements OnInit {
         this.category = data;
       })
     })
+  }
+    filter(){
+    // this.getItems();
+    // this.albums=this.mainData;
+    this.filterState=true;
+    this.filteredData=this.products.filter(x=>{
+        return x.name.toLowerCase().search(this.data.toLowerCase())!==-1 ;
+    });
+    this.data='';
+    // this.albums=this.filteredData;
   }
 
 }
