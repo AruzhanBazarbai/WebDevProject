@@ -1,6 +1,6 @@
- <fieldset style="width:600px;">
-  <label for=""><strong>Enter:</strong></label>
-  <input type="text" [(ngModel)]="data"  style="width:480px;">
+ <fieldset class="search" style="width:600px; border: none;">
+  <label for=""><strong style="font-size: 30px; color: #275362; padding-right: 15px;">SEARCH</strong></label>
+  <input class="inp" type="text" [(ngModel)]="data"  style="width:1150px; border: none; height: 30px; border-radius: 3px;">
   <button type="submit" (click)="filter()">Find</button>
 </fieldset>
 <main class="main-container" *ngIf="!filterState">
